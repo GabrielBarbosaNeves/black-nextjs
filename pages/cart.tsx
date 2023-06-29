@@ -1,6 +1,7 @@
 import Head from "next/head";
+import Header from "./src/components/Header";
 
-export default function Card() {
+export default function Cart() {
   return (
     <>
       <Head>
@@ -8,6 +9,8 @@ export default function Card() {
         <meta name="description" content="Meu carrinho de compras" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Header />
 
       <h1>Carrinho</h1>
     </>
