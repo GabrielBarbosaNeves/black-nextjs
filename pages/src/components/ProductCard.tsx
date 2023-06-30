@@ -11,7 +11,7 @@ type ProductCardProps = {
   product: ProductType;
 };
 
-export default function ProductCard({ product }: ProductCardProps) {
+const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const [toastIsOpen, setToastIsOpen] = useState(false);
   const { id, name, imageUrl, price } = product;
 
@@ -22,8 +22,8 @@ export default function ProductCard({ product }: ProductCardProps) {
           <Image
             className="card-img-top"
             src={imageUrl}
-            alt={product.name}
-            height={500}
+            alt="Product"
+            height={300}
             width={600}
           />
         </Link>
@@ -52,7 +52,10 @@ export default function ProductCard({ product }: ProductCardProps) {
           </Button>
         </CardBody>
       </Card>
+
       <SuccessToast toastIsOpen={toastIsOpen} setToastIsOpen={setToastIsOpen} />
     </>
   );
-}
+};
+
+export default ProductCard;
